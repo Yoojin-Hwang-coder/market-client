@@ -15,17 +15,8 @@ function Mainpage(){
             console.error(error);
         })
     },[]);
-   
-
     return (
     <div> 
-        <div> 
-        <header>
-         <div id="header-area">
-            <img src="./img/1024px-Audi_logo_detail.svg.png" alt="logo" id="logo-img" />
-          </div>
-        </header>
-         <div id="body">
         <div id="banner">
         </div>
         <h1>판매상품</h1>
@@ -34,7 +25,7 @@ function Mainpage(){
                     return (
                       
                      <div className="product-card">
-                        <Link className="product-link" to={`/product/${index}`}>
+                        <Link className="product-link" to={`/product/${product.id}`}>
                          <div>   
                          <img className="product-img" src={product.imgUrl}/>
                          </div>
@@ -52,11 +43,8 @@ function Mainpage(){
                     );    
                })
             }
-        </div>     
-         </div>
+       
         </div>
-        <footer>
-        </footer>
     </div>
     );
 }
